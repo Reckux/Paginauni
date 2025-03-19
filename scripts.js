@@ -1,13 +1,18 @@
 document.addEventListener('DOMContentLoaded', function() {
     const menuToggle = document.querySelector('.menu-toggle');
     const menu = document.querySelector('.menu');
-    const selectorCategoria = document.getElementById('categoria');
-    const productoGrid = document.getElementById('producto-grid');
 
-    // Menú desplegable para móviles
     menuToggle.addEventListener('click', function() {
         menu.classList.toggle('active');
     });
+
+    // Cerrar el menú al hacer clic fuera de él
+    document.addEventListener('click', function(event) {
+        if (!menu.contains(event.target) && !menuToggle.contains(event.target)) {
+            menu.classList.remove('active');
+        }
+    });
+});
 
     // Datos de productos (simulados)
     const productos = {
@@ -40,4 +45,3 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         }
     });
-});

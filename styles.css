@@ -127,7 +127,15 @@ footer {
     margin-top: 20px;
 }
 
-/* Responsive Design */
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
 @media (max-width: 768px) {
     .menu-toggle {
         display: block;
@@ -153,21 +161,39 @@ footer {
     .menu li {
         margin: 15px 0;
     }
+}
 
-    .hero h1 {
-        font-size: 2rem;
-    }
+/* Estilos para los productos */
+.producto-item {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 10px;
+    width: 200px;
+    text-align: center;
+    text-decoration: none;
+    color: #333;
+}
 
-    .hero p {
-        font-size: 1rem;
-    }
+.producto-item img {
+    width: 100%;
+    height: 200px; /* Altura fija para todas las imágenes */
+    object-fit: cover; /* Para que las imágenes no se deformen */
+    border-radius: 8px;
+}
 
-    .categoria-grid, .producto-grid {
-        flex-direction: column;
-        align-items: center;
-    }
+.producto-item h3 {
+    margin: 10px 0;
+    font-size: 1.2rem;
+}
 
-    .categoria-item, .producto-item {
-        width: 80%;
-    }
+.producto-item p {
+    margin: 5px 0;
+    font-size: 0.9rem;
+}
+
+.producto-item .precio {
+    font-weight: bold;
+    color: #333;
 }
